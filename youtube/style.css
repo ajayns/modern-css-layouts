@@ -1,0 +1,39 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 1em;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.sidebar,
+.header {
+    padding: 1.5em;
+    background-color: lightgray;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    grid-gap: 0.4em;
+}
+
+.item {
+    background-color: lightgrey;
+}
+
+.item-img {
+    width: 100%;
+}
+
+@media (max-width: 1280px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none;
+    }
+}
